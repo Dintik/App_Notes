@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Страница</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+<div class="wrapp-bg">
+	<h1>Заметки</h1>
+	
+	<div class="operation-on-note">
+		<button id="addNote" class="add__note">Добавить заметку</button>
+<!-- 	<button id="editNote" class="edit__note">Изменить заметку</button>
+		<button id="deleteNote" class="delete__note">Удалить заметку</button> -->
+		<button id="deleteAllNote" class="delete__note">Удалить все заметки</button>
+	</div>
+
+
+	<!-- -----   preloader   ----- -->
+<div class="flex-center">
+	<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+
+	<div id="notesContainer" class="container__notes">
+		<!-- Заметки здесь -->
+	</div>
+</div>
+
+
+
+<div id="windowCloseBg" class="window__close-bg dn"></div>
+
+<div id="addNoteWindow" class="add__note__window dn">
+	<span class="alert-subtitle">Введите название заметки</span>
+	<input type="text" placeholder="" id="addNoteTitle">
+	<span class="alert-subtitle">Введите текст заметки</span>
+	<textarea name="" id="addNoteText" cols="30" rows="10"></textarea>
+	<button id="addNoteSub" class="add__note">Добавить заметку</button>
+</div>
+
+
+<div id="editNoteWindow" class="edit__note__window dn">
+	<span class="alert-subtitle">Введите название заметки</span>
+	<input type="text" placeholder="" id="editNoteTitle">
+	<span class="alert-subtitle">Введите текст заметки</span>
+	<textarea name="" id="editNoteText" cols="30" rows="10"></textarea>
+	<button id="editNoteSub" class="edit__note">Изменить заметку</button>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
